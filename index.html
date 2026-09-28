@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Wincet, developer dengan fokus pada web development modern">
+    <title>Portfolio | Wincet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Wincet<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Aktifkan mode terang"
+                title="Aktifkan mode terang">
+                <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                </svg>
+                <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Tersedia untuk proyek
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Halo, saya</span>
+                <span class="hero-name">wincet chrystian</span>
+                <span class="hero-role">
+                    <span class="role-static">Seorang </span>
+                    <span class="role-dynamic" id="typedText"></span>
+                    <span class="cursor-blink">|</span>
+                </span>
+            </h1>
+            <p class="hero-desc">Siswa SMK jurusan Rekayasa Perangkat Lunak yang bersemangat dalam membangun pengalaman
+                web yang modern dan fungsional.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Lihat Karya</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Skill Utama</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="0">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Proyek</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="1">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Tahun Belajar</span>
+                </div>
+            </div>
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 — About Me</span>
+                <h2 class="section-title">Get to Know<br><span class="highlight">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <img id="aboutMeImage"
+                            src="https://i.ibb.co.com/bRWkd5V0/Whats-App-Image-2026-09-02-at-20-59-26-1-1.png"
+                            alt="Foto profil About Me" />
+                    </div>
+                    <div class="about-image-decor"></div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        Saya adalah siswa <strong>SMK Plus Pelita Nusantara jurusan Rekayasa Perangkat Lunak
+                            (RPL)</strong> yang sedang menempuh pendidikan. Memiliki ketertarikan mendalam di bidang
+                        pengembangan web, saya terus mengasah kemampuan dalam membangun website yang modern dan
+                        responsif.
+                    </p>
+                    <p class="about-text">
+                        Dengan fondasi kuat di <strong>PHP, HTML, CSS, dan JavaScript</strong>, saya mampu membuat
+                        website dari sisi front-end hingga back-end. Saya percaya bahwa belajar tanpa henti adalah kunci
+                        untuk menjadi developer yang handal.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c6 3 10 0 12-2v-3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">SMK Plus Pelita Nusantara</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Status</span>
+                                <span class="info-value">Aktif Belajar</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Lokasi</span>
+                                <span class="info-value">Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Fokus</span>
+                                <span class="info-value">Web Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 — Education & Certificates</span>
+                <h2 class="section-title">My Learning<br><span class="highlight">Journey</span></h2>
+            </div>
+            <div class="education-grid">
+                <article class="education-card">
+                    <div class="education-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c6 3 10 0 12-2v-3" />
+                        </svg>
+                    </div>
+                    <span class="education-label">Education</span>
+                    <h3 class="education-title">SMK Plus Pelita Nusantara</h3>
+                    <p class="education-desc">Currently studying Software Engineering while building skills in
+                        programming and web development.</p>
+                </article>
+                <article class="education-card bootcamp-card">
+                    <button class="bootcamp-toggle" id="bootcampToggle" type="button" aria-expanded="false"
+                        aria-controls="bootcampDetails">
+                        <span class="education-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                <path d="M8 6h8M8 10h8" />
+                            </svg>
+                        </span>
+                        <span class="education-label">Bootcamp</span>
+                        <span class="education-title">View Bootcamps</span>
+                        <span class="education-desc">Click to see Dicoding and Skilvul.</span>
+                        <span class="bootcamp-toggle-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="bootcamp-details" id="bootcampDetails" hidden>
+                        <div class="bootcamp-item">
+                            <span class="education-label">Bootcamp</span>
+                            <h3 class="education-title">Dicoding</h3>
+                            <p class="education-desc">Learning programming and web development through practical classes and projects.</p>
+                        </div>
+                        <div class="bootcamp-item">
+                            <span class="education-label">Bootcamp</span>
+                            <h3 class="education-title">Skilvul</h3>
+                            <p class="education-desc">Building foundational skills in HTML, CSS, and web development through hands-on learning.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="certificate-list">
+                <div class="subsection-heading">
+                    <span class="section-tag">Certificates</span>
+                    <h3 class="subsection-title">Certificate Collection</h3>
+                </div>
+                <div class="certificate-viewport">
+                    <div class="certificate-grid" id="certificateGrid">
+                        <button class="certificate-card" type="button" data-certificate-title="HTML Dasar - Skilvul"
+                            data-certificate-detail="Sertifikat HTML Dasar dari Skilvul."
+                            data-certificate-image="https://i.ibb.co.com/fds3HC1h/CSS-dasar-Skilvul.png">
+                            <img class="certificate-thumbnail" src="https://i.ibb.co.com/fds3HC1h/CSS-dasar-Skilvul.png"
+                                alt="HTML Dasar - Skilvul">
+                            <span class="certificate-content">
+                                <span class="certificate-label">Certificate</span>
+                                <strong class="certificate-title">HTML Dasar - Skilvul</strong>
+                                <span class="certificate-desc">Click to view</span>
+                            </span>
+                            <span class="certificate-arrow" aria-hidden="true">&nearr;</span>
+                        </button>
+                        <button class="certificate-card" type="button" data-certificate-title="CSS Dasar - Skilvul"
+                            data-certificate-detail="Sertifikat CSS Dasar dari Skilvul."
+                            data-certificate-image="https://i.ibb.co.com/fds3HC1h/CSS-dasar-Skilvul.png">
+                            <img class="certificate-thumbnail" src="https://i.ibb.co.com/fds3HC1h/CSS-dasar-Skilvul.png"
+                                alt="CSS Dasar - Skilvul">
+                            <span class="certificate-content">
+                                <span class="certificate-label">Certificate</span>
+                                <strong class="certificate-title">CSS Dasar - Skilvul</strong>
+                                <span class="certificate-desc">Click to view</span>
+                            </span>
+                            <span class="certificate-arrow" aria-hidden="true">&nearr;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="certificate-controls">
+                    <button class="certificate-nav" id="certificatePrevious" type="button"
+                        aria-label="Show previous certificates" title="Show previous certificates">&larr;</button>
+                    <span class="certificate-page" id="certificatePage" aria-live="polite">1/1</span>
+                    <button class="certificate-nav" id="certificateNext" type="button"
+                        aria-label="Show next certificates" title="Show next certificates">&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+        <div class="certificate-modal-backdrop" data-close-certificate></div>
+        <div class="certificate-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
+            <button class="certificate-modal-close" type="button" aria-label="Close certificate preview"
+                data-close-certificate>&times;</button>
+            <div class="certificate-preview">
+                <img id="certificateModalImage" src="https://i.ibb.co.com/fds3HC1h/CSS-dasar-Skilvul.png"
+                    alt="Certificate preview">
+                <span>Certificate Preview</span>
+            </div>
+            <h3 id="certificateModalTitle">Certificate Preview</h3>
+            <p id="certificateModalDetail">Klik kartu sertifikat untuk melihat detail.</p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 — Skills</span>
+                <h2 class="section-title">Technologies I<br><span class="highlight">Know</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="html">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 128 128">
+                            <path fill="currentColor"
+                                d="M19.569 27l8.087 89.919 36.408 10.081 36.399-10.07 8.107-89.93h-89.001zm68.878 25.423l-.527 5.866-.265 2.965h-37.311l1.056 11.847h35.199l-.277 2.828-2.773 31.025-.184 2.046-19.365 5.382v.008l-.016.004-19.379-5.378-1.327-14.86h11.612l.675 7.548 8.42 2.28.01-.003v-.005l8.438-2.277 1.168-11.489h-30.124l-2.81-31.404-.262-2.925h46.152l-.269 2.542z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">HTML</h3>
+                    <p class="skill-desc">Struktur semantik & aksesibilitas</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="46"></div>
+                    </div>
+                    <span class="skill-percent">46%</span>
+                </div>
+
+                <div class="skill-card" data-skill="css">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 128 128">
+                            <path fill="currentColor"
+                                d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063 8.078-90.48h-88.66zm69.21 50.488l-2.35 21.892-.009.27-22.521 6.197v.013l-.004-.001-22.521-6.211-1.537-17.21h11.566l.781 8.754 11.711 3.169.004-.001v.002l11.723-3.173 1.22-13.597h-24.932l-.277-3.063-.553-6.161-.33-3.688h26.145l1.148-12.797h-40.174l-.277-3.063-.553-6.161-.33-3.688h53.744l-.277 3.206z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">CSS</h3>
+                    <p class="skill-desc">Styling modern & animasi</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="21"></div>
+                    </div>
+                    <span class="skill-percent">21%</span>
+                </div>
+
+                <div class="skill-card" data-skill="js">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 128 128">
+                            <path fill="currentColor"
+                                d="M2 1v125h125v-125h-125zm66.119 106.513c0 10.494-6.164 15.298-15.138 15.298-8.115 0-12.823-4.199-15.237-9.266l8.272-5.003c1.595 2.831 3.046 5.224 6.533 5.224 3.339 0 5.457-1.309 5.457-6.404v-34.633h10.113v34.784zm23.953 15.298c-9.405 0-15.494-4.479-18.455-10.349l8.272-4.795c2.185 3.574 5.044 6.216 10.073 6.216 4.231 0 6.942-2.114 6.942-5.041 0-3.508-2.775-4.753-7.464-6.798l-2.561-1.098c-7.399-3.149-12.312-7.105-12.312-15.455 0-7.694 5.864-13.554 15.029-13.554 6.526 0 11.213 2.271 14.588 8.216l-7.987 5.126c-1.755-3.149-3.65-4.389-6.601-4.389-3.006 0-4.913 1.907-4.913 4.389 0 3.074 1.907 4.319 6.312 6.216l2.561 1.098c8.713 3.733 13.632 7.546 13.632 16.107 0 9.229-7.252 14.297-16.996 14.297l-.12-.186z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-desc">Interaktivitas & logika</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="14"></div>
+                    </div>
+                    <span class="skill-percent">14%</span>
+                </div>
+
+                <div class="skill-card" data-skill="php">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 128 128">
+                            <path fill="currentColor"
+                                d="M64 33.039c-33.741 0-64 19.565-64 36.961s30.259 36.961 64 36.961 64-19.565 64-36.961-30.259-36.961-64-36.961zm-16.574 44.243h-6.066l-2.715 13.37h-7.424l8.238-40.61h14.252c7.143 0 11.609 4.632 9.934 13.093-1.724 8.7-7.891 14.147-16.219 14.147zm30.479-13.37c1.226-6.039-1.588-7.127-5.869-7.127h-5.322l-3.225 15.906h5.322c5.402 0 7.942-3.041 9.094-8.779zm28.812-1.028c-1.724 8.7-7.891 14.147-16.219 14.147h-6.066l-2.715 13.37h-7.424l8.238-40.61h14.252c7.143.001 11.609 4.633 9.934 13.093zm-12.684 7.099h-5.322l-3.225 15.906h5.322c5.402 0 7.942-3.041 9.094-8.779 1.226-6.039-1.588-7.127-5.869-7.127z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">PHP</h3>
+                    <p class="skill-desc">Backend & server-side</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 — Projects</span>
+                <h2 class="section-title">My<br><span class="highlight">Work</span></h2>
+            </div>
+            <div class="projects-viewport">
+                <div class="projects-grid" id="projectsGrid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img class="project-thumbnail" src="asset/my work/Kuy Nabung.png" alt="Logo aplikasi KUY Nabung">
+                        <div class="project-overlay">
+                            <span class="project-view">KUY Nabung</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">KUY Nabung</h3>
+                        <p class="project-desc">Aplikasi menabung untuk membantu mencatat target, pemasukan, dan perkembangan tabungan.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img class="project-thumbnail" src="asset/my work/Jajankuy.png" alt="Logo aplikasi JajanKuy">
+                        <div class="project-overlay">
+                            <span class="project-view">JajanKuy</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">JajanKuy</h3>
+                        <p class="project-desc">Aplikasi kantin untuk melihat menu, memilih makanan, dan memesan dengan lebih mudah.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 5h16v14H4z" />
+                                <path d="M8 9h8M8 13h5" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">Portfolio Website</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-desc">Website portfolio pribadi untuk menampilkan profil, skill, sertifikat, dan project.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="project-controls">
+                <button class="project-nav" id="projectPrevious" type="button"
+                    aria-label="Show previous projects" title="Show previous projects">&larr;</button>
+                <span class="project-page" id="projectPage" aria-live="polite">1/1</span>
+                <button class="project-nav" id="projectNext" type="button"
+                    aria-label="Show next projects" title="Show next projects">&rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05 — Contact</span>
+                <h2 class="section-title">Let's<br><span class="highlight">Connect</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-desc">Tertarik untuk berkolaborasi atau memiliki proyek yang ingin dikerjakan
+                        bersama? Jangan ragu untuk menghubungi saya.</p>
+                    <div class="contact-links">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chrystians329@gmail.com"
+                            class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">chrystians329@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/chrystians329" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">GitHub</span>
+                                <span class="contact-link-value">github.com/chrystians329</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/W.chrystiann" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">Instagram</span>
+                                <span class="contact-link-value">@W.chrystiann</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Wincet<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-text">Dibuat dengan HTML - CSS - JS</p>
+                <p class="footer-copyright">&copy; 2026 Wincet. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
