@@ -373,3 +373,28 @@ window.addEventListener('scroll', () => {
         scrollIndicator.style.pointerEvents = 'auto';
     }
 });
+
+// ============================
+// Contact Form — Send Email
+// ============================
+const sendEmailBtn = document.getElementById('sendEmailBtn');
+
+if (sendEmailBtn) {
+    sendEmailBtn.addEventListener('click', () => {
+        const name = document.getElementById('contactName').value.trim();
+        const subject = document.getElementById('contactSubject').value.trim();
+        const message = document.getElementById('contactMessage').value.trim();
+
+        if (!name || !message) {
+            alert('Mohon isi nama dan pesan terlebih dahulu.');
+            return;
+        }
+
+        const emailTo = 'chrystians329@gmail.com';
+        const emailSubject = encodeURIComponent(subject || 'Pesan dari Portfolio');
+        const emailBody = encodeURIComponent(`Halo Wincet,\n\nNama: ${name}\n\n${message}`);
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailTo}&su=${emailSubject}&body=${emailBody}`;
+
+        window.open(mailtoLink, '_blank');
+    });
+}
