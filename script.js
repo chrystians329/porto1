@@ -5,8 +5,8 @@ const themeToggle = document.getElementById('themeToggle');
 const aboutMeImage = document.getElementById('aboutMeImage');
 const savedTheme = localStorage.getItem('theme');
 
-const darkModeImage = 'https://i.ibb.co.com/bRWkd5V0/Whats-App-Image-2026-09-02-at-20-59-26-1-1.png';
-const lightModeImage = 'https://i.ibb.co.com/ddxCxLz/Whats-App-Image-2026-09-02-at-20-59-26-2.jpg';
+const darkModeImage = 'asset/about-me/WhatsApp Image 2026-09-02 at 20.59.26 (1) (1).png';
+const lightModeImage = 'asset/about-me/WhatsApp Image 2026-09-02 at 20.59.26 (2).jpeg';
 
 if (savedTheme === 'light') {
     document.documentElement.dataset.theme = 'light';
